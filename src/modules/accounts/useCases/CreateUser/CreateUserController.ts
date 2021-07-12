@@ -5,13 +5,12 @@ import { CreateUserUseCase } from "@modules/accounts/useCases/CreateUser/CreateU
 
 class CreateUserController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { name, email, driver_license, password } = request.body;
+    const { name, email, password } = request.body;
 
     const createUserUseCase = container.resolve(CreateUserUseCase);
     await createUserUseCase.execute({
       name,
       email,
-      driver_license,
       password,
     });
 

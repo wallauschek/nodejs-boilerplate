@@ -9,7 +9,6 @@ class UserMap {
     name,
     id,
     avatar,
-    driver_license,
     avatar_url,
   }: User): IUserResponseDTO {
     const user = classToClass({
@@ -17,7 +16,6 @@ class UserMap {
       name,
       id,
       avatar,
-      driver_license,
       avatar_url,
     });
     return user;
